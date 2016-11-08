@@ -3,14 +3,13 @@ package donuttycoon;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Donut {
-    private static final AtomicInteger count = new AtomicInteger(0);
     private String id;
     private String name;
     private String topping;
     private Integer price;
 
-    public Donut(String name, String topping, Integer price) {
-        this.id = Integer.toString(count.incrementAndGet());
+    public Donut(String id, String name, String topping, Integer price) {
+        this.id = id
         this.name = name;
         this.topping = topping;
         this.price = price;

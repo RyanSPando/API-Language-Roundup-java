@@ -2,6 +2,7 @@ package donuttycoon;
 
 import static spark.Spark.*;
 import static donuttycoon.JsonUtil.*;
+import java.sql.Connection;
 
 public class DonutController {
 
@@ -30,6 +31,10 @@ public class DonutController {
             req.queryParams("name"),
             req.queryParams("topping"),
             Integer.parseInt(req.queryParams("price"))
+        ), json());
+
+        delete("/donuts/:id", (req, res) -> donutService.deleteDonut(
+            req.params(":id")
         ), json());
 
         after((req, res) -> {
