@@ -9,7 +9,7 @@ public class Donut {
     private Integer price;
 
     public Donut(String id, String name, String topping, Integer price) {
-        this.id = id
+        this.id = id;
         this.name = name;
         this.topping = topping;
         this.price = price;
